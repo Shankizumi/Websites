@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabInteriors</title>
+    <script src="https://kit.fontawesome.com/6828795f72.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="/images/pexels-cadeau-maestro-1170412.jpg" id="slideimg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/images/Screenshot (1)1.png">
+                </div>
+                <div class="contianer">
+                    <div class="icon">
+                        <i class="fa fa-shopping-cart"></i>
+                        <i class="fa fa-search"></i>
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h1>LET'S DESIGN THE INTERIOR</h1>
+                <H2>LIKE NEVER BEFORE</H2>
+                <H3>Contact us to get us to design one of the best interiors for your home, office or anywhere.</H3>
+                <div><button class="button" id="btn1"><h2>About Us</h2></button>
+                <button class="button" id="btn2"><h2>Contact Us</h2></button></div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var slideimg = document.getElementById("slideimg");
+        var images = new Array(
+            "/images/pexels-cadeau-maestro-1170412.jpg",
+            "/images/pexels-pixabay-37347.jpg",
+            "/images/pexels-pixabay-260689.jpg",
+            "/images/pexels-rachel-claire-4857757.jpg"
+            );
+        var len= images.length;
+        var i = 0;
+        
+        function slider(){
+            if(i>len-1){
+                i=0;
+            }
+            slideimg.src= images[i];
+            i++;
+            setTimeout('slider()',3000)
+        }
+        
+
+    </script>
+
+
+</body>
+
+</html>
